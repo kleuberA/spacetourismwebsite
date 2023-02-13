@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Destination from './Pages/Destination';
 import Destinations from './components/Destinations';
 import Crew from './Pages/Crew';
+import Technology from './Pages/Technology';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/crew",
     element: <Crew />,
+  },
+  {
+    path: "/technology",
+    element: <Technology />,
   },
 ]);
 
