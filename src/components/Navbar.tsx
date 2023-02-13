@@ -11,6 +11,15 @@ const Navbar = () =>{
         borderBottomWidth: '2px',
         borderColor: 'white',
     };
+    let activeStyleResponsive = {
+        display: 'flex',
+        alignItems: 'center',
+        height: 'inherit',
+        background: 'white',
+        color: 'black',
+        padding: '10px 15px',
+        borderRadius: '5px'
+    };
     const handleMenu = () =>{
         let menu = document.querySelector('#menu');
         menu?.classList.remove('hidden');
@@ -46,6 +55,7 @@ const Navbar = () =>{
                             style={({ isActive }) => isActive ? activeStyle : undefined}>
                             01 Destination
                         </NavLink>
+                        <hr />
                         <NavLink
                             to="/crew"
                             style={({ isActive }) => isActive ? activeStyle : undefined}>
@@ -66,22 +76,25 @@ const Navbar = () =>{
                         </div>
                         <NavLink
                             to="/"
-                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                            style={({ isActive }) => isActive ? activeStyleResponsive : undefined}>
                             00 Home
                         </NavLink>
+                        <hr className='bg-white w-[60%] h-[2px]' />
                         <NavLink
                             to="/destination"
-                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                            style={({ isActive }) => isActive ? activeStyleResponsive : undefined}>
                             01 Destination
                         </NavLink>
+                        <hr className='bg-white w-[60%] h-[2px]' />
                         <NavLink
                             to="/crew"
-                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                            style={({ isActive }) => isActive ? activeStyleResponsive : undefined}>
                             02 Crew
                         </NavLink>
+                        <hr className='bg-white w-[60%] h-[2px]' />
                         <NavLink
                             to="/technology"
-                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                            style={({ isActive }) => isActive ? activeStyleResponsive : undefined}>
                             03 Technology
                         </NavLink>
                     </ul>
