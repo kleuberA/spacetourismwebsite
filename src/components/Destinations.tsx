@@ -21,7 +21,7 @@ const Destinations = () =>{
     pathAtual == 'destination/titan' ? planet = 3: undefined;
 
     return(
-        <div className="flex lg:flex-col ">
+        <div className="flex flex-col lg:flex-col ">
             <ul className="flex lg:flex-row text-white gap-6 items-center h-20 justify-between lg:w-3/4">
                 <NavLink
                     to="/destination/"
@@ -44,16 +44,16 @@ const Destinations = () =>{
                     Titan
                 </NavLink>
             </ul>
-            <div className="flex lg:flex-col lg:pt-3">
+            <div className="flex flex-col lg:flex-col lg:pt-3">
                 <h1 className="text-white lg:text-7xl uppercase">{data.destinations[planet].name}</h1>
                 <span className="text-white opacity-80 lg:text-base lg:w-3/4 lg:mt-4 lg:mb-4">{data.destinations[planet].description}</span>
-                <hr className="lg:w-3/4 lg:mt-6 lg:mb-6 opacity-80" />
-                <div className="flex lg:flex-row lg:justify-start lg:pt-6 lg:gap-14">
-                    <div className="flex lg:flex-col">
+                <hr className="lg:w-3/4 mt-4 mb-4 lg:mt-6 lg:mb-6 opacity-80" />
+                <div className="flex lg:flex-row justify-between lg:justify-start lg:pt-6 lg:gap-14">
+                    <div className="flex flex-col lg:flex-col">
                         <h6 className="uppercase lg:text-sm text-white opacity-80">avg. distance</h6>
                         <span className="uppercase lg:text-xl text-white">{data.destinations[planet].distance}</span>
                     </div>
-                    <div className="flex lg:flex-col">
+                    <div className="flex flex-col lg:flex-col">
                         <h6 className="uppercase lg:text-sm text-white opacity-80">est. travel time</h6>
                         <span className="uppercase lg:text-xl text-white">{data.destinations[planet].travel}</span>
                     </div>

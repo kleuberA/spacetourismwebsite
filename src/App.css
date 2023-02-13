@@ -2,6 +2,7 @@
     background: url('./assets/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 .destination{
     background: url('./assets/destination/background-destination-desktop.jpg');
@@ -29,6 +30,7 @@
     width: 80%;
     margin: 20px auto;
     overflow: hidden;
+    flex-direction: row;
   }
   .slide-items {
     display: flex;
@@ -90,3 +92,115 @@
     background: white;
     color: indigo;
   }
+.slideItemTechnology{
+  width: 100%;
+}
+
+
+@media screen and (max-width: 640px) {
+  .home{
+    background: url('./assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .destination{
+    background: url('./assets/destination/background-destination-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .crew{
+    background: url('./assets/crew/background-crew-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .technology{
+    background: url('./assets/technology/background-technology-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .item {
+    flex-basis: 100%;
+    height: 75vh;
+    vertical-align: top;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .indicators {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .slideTechnology{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    flex-direction: column-reverse;
+  }
+  .indicatorsTechnology {
+    flex-direction: row;
+  }
+  .slideItemTechnology{
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+  .home{
+    background: url('./assets/home/background-home-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .destination{
+    background: url('./assets/destination/background-destination-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .crew{
+    background: url('./assets/crew/background-crew-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .technology{
+    background: url('./assets/technology/background-technology-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .item {
+    flex-basis: 100%;
+    height: 75vh;
+    vertical-align: top;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-direction: column-reverse;
+  }
+  .indicators {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .slideTechnology{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    flex-direction: column-reverse;
+  }
+  .slideItemTechnology{
+    height: 70vh;
+  }
+  .indicatorsTechnology {
+    flex-direction: row;
+  }
+}

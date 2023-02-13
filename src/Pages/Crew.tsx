@@ -7,11 +7,11 @@ import Mark from '../assets/crew/image-mark-shuttleworth.png';
 import Victor from '../assets/crew/image-victor-glover.png';
 
 const Crew = () =>{
-
     let [select, setSelect] = useState({selected: 0});
 
     let dataElements = data;
-    
+    let imageUrl: string | undefined;
+
     const handleClick = (e: any) => {
         let value = e.target.getAttribute('data-value');
         if (value !== null) {
@@ -20,9 +20,11 @@ const Crew = () =>{
     };
 
     const { selected } = select;
-    const style = select.selected >= 1
-        ? { transform: `translateX(-${selected * 1228.8}px)` }
-        : {};
+    let largura = window.screen.width;
+
+    let calculoPxTransform = (80 * largura) / 100;
+
+    let style = select.selected >= 1 ? { transform: `translateX(-${selected * calculoPxTransform}px)` } : {};
 
     const renderIndicator = []
     for(let i=0; i < 4; i++) {
@@ -30,11 +32,8 @@ const Crew = () =>{
             <li data-value={i} key={i} className={selected == i ? 'active' : ''}></li>
         )
     }
-    let imageUrl: string | undefined;
 
     return(
-
-        
         <div className="crew w-full h-screen">
             <Navbar/>
             <h1 className="uppercase w-4/5 m-auto text-white tracking-wide lg:text-3xl lg:mb-5">
@@ -50,13 +49,13 @@ const Crew = () =>{
                         key == 3 ? imageUrl = Anousheh : undefined;
                         return(
                             <div className="item" key={key}>
-                                <div className="w-2/4 flex lg:flex-col lg:gap-6">
+                                <div className="lg:w-2/4 flex flex-col lg:flex-col lg:gap-6 text-center lg:text-start">
                                     <h3 className="lg:text-4xl text-gray-400 font-light">{element.role}</h3>
                                     <h1 className="lg:text-6xl text-white">{element.name}</h1>
-                                    <span className="text-gray-500 w-3/4 font-normal">{element.bio}</span>
+                                    <span className="text-gray-500 lg:w-3/4 font-normal">{element.bio}</span>
                                 </div>
-                                <div className="w-2/4">
-                                    <img className="h-[75vh]" src={imageUrl} alt="" />
+                                <div className="lg:w-2/4">
+                                    <img className="h-[35vh] lg:h-[75vh]" src={imageUrl} alt="" />
                                 </div>
                             </div>
                         )

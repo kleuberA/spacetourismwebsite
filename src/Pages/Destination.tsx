@@ -22,15 +22,15 @@ const Destination= () =>{
     return(
         <div className="destination w-full h-screen">
             <Navbar/>
-            <div className="flex lg:flex-row w-4/5 m-auto gap-4 h-[80vh] items-center">
-                <div className="w-2/4">
+            <div className="flex flex-col lg:flex-row w-4/5 m-auto gap-4 h-[80vh] items-center">
+                <div className="lg:w-2/4">
                     <h1 className="uppercase text-white tracking-wide lg:text-3xl lg:mb-5">
                         <span className="text-gray-700">01 </span>
                         Pick your destination
                     </h1>
-                    <img src={image} alt="" />
+                    <img className="w-2/4 lg:w-4/5 sm: m-auto" src={image} alt="" />
                 </div>
-                <div className="w-2/4">
+                <div className="lg:w-2/4">
                     <Outlet />
                 </div>
             </div>
