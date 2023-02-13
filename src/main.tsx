@@ -6,6 +6,7 @@ import './App.css'
 import Home from './Pages/Home';
 import Destination from './Pages/Destination';
 import Destinations from './components/Destinations';
+import Crew from './Pages/Crew';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         element: <Destinations />,
       },
     ],
+  },
+  {
+    path: "/crew",
+    element: <Crew />,
   },
 ]);
 
